@@ -1,0 +1,28 @@
+{
+  "name": "mail-service",
+  "version": "0.0.1",
+  "description": "A simple nodejs module to send rich html emails easily",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "FDIM",
+  "license": "MIT",
+  "homepage": "https://github.com/FDIM/mail-service#readme",
+  "bugs": {
+    "url": "https://github.com/FDIM/mail-service/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FDIM/mail-service.git"
+  },
+  "keywords": [
+    "mail",
+    "mail-service"
+  ],
+  "dependencies": {
+    "angular-template": "^2.0.9",
+    "juice": "^2.0.0",
+    "nodemailer": "^2.4.2"
+  }
+}
