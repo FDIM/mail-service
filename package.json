@@ -4,7 +4,7 @@
   "description": "A simple nodejs module to send rich html emails easily",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "jasmine"
   },
   "author": "FDIM",
   "license": "MIT",
@@ -22,6 +22,7 @@
   ],
   "dependencies": {
     "angular-template": "^2.0.9",
+    "async": "^1.5.2",
     "juice": "^2.0.0",
     "nodemailer": "^2.4.2"
   }
