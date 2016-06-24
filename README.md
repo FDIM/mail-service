@@ -1,5 +1,6 @@
 # mail-service
-A simple nodejs module that enables you to send rich html emails with inline css. All you need is a html template with angular expressions as placeholders.
+A simple nodejs module that enables you to send rich html emails with inline css and embedded images.
+All you need is a html template with angular like expressions (yes, ng-repeat will work too, even in plain text template).
 
 # install
 As simple as "npm install mail-service"
