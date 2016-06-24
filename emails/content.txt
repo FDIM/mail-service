@@ -1,0 +1,8 @@
+Hi {{name}},
+
+This is an alternative template.
+
+<p ng-repeat="i in items">{{i}}
+<p>
+To unsubscribe, open this link in a browser:
+{{unsubscribeLink}}

@@ -1,7 +1,7 @@
 {
   "name": "mail-service",
-  "version": "0.0.2",
-  "description": "A simple nodejs module to send rich html emails easily",
+  "version": "1.0.0",
+  "description": "A simple nodejs module to send rich html emails easily using angular templates and automatic image embedding.",
   "main": "index.js",
   "scripts": {
     "test": "jasmine"
@@ -23,7 +23,9 @@
   "dependencies": {
     "angular-template": "^2.0.9",
     "async": "^1.5.2",
+    "extend": "^3.0.0",
     "juice": "^2.0.0",
-    "nodemailer": "^2.4.2"
+    "nodemailer": "^2.4.2",
+    "striptags": "^2.1.1"
   }
 }
