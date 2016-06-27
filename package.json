@@ -1,6 +1,6 @@
 {
   "name": "mail-service",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple nodejs module to send rich html emails easily using angular templates and automatic image embedding.",
   "main": "index.js",
   "scripts": {

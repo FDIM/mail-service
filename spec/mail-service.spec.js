@@ -5,7 +5,7 @@ var writeTestFiles = false;
 var options = {
   service:'Mandrill',
   auth: {
-    user:'',
+    user:'cuubas',
     pass: ""
   },
   debug:true,
@@ -63,13 +63,16 @@ describe("mail service", function() {
     var mailer = new MailService(options, defaultMailOptions);
     mailer.$test = doNotSendEmails;
     var templateData = {
-      name:'Tester',
+      name:'*|FNAME|*',
       unsubscribeLink:'https://www.google.com',
       items:['line1','line2','line3']
     };
     var textTemplateOptions = {
       path: __dirname+'/../emails/content.txt',
-      data:templateData
+      data:templateData,
+      placeholders:{
+        fname:'Tester'
+      }
     };
 
     var mailOptions = {
