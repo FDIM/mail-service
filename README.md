@@ -29,6 +29,13 @@ function MyMailer(){
   MailService.call(this);
   // optional, just in case you need to fetch image from db
   this.fileHandler = asyncFileHandler;
+  // used by regexp to do global replacement
+  this.placeholderOptions = {open:'\\\*\\\|', close: '\\\|\\\*'}
+  // you can also post process template, default one replaces mailchimp like tags (*|FNAME|*), provided via placeholders template options
+  this.postProcessTemplate = postProcessTemplate;
+}
+function postProcessTemplate(tpl, templateOptions, options, callback) {
+  callback(null, tpl);
 }
 function asyncFileHandler(filePath, templateOptions, callback){
   // gets called once per <img src="<path>"/> to read image file.
@@ -45,7 +52,8 @@ MyMailer.prototype.sendForgotPasswordMail = function(user, data, callback){
     subject: "Reset password link",
     textTemplate: {
       path:__dirname+'/../emails/forgot-password.txt',
-      data: data
+      data: data,
+      placeholders:{fname:'Test'}
     },
     htmlTemplate: {
       path:__dirname+'/../emails/forgot-password.html',
