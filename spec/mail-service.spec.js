@@ -12,7 +12,10 @@ var options = {
   logger:true,
 };
 var defaultMailOptions = {
-  from:'no-reply@cuubas.dk'
+  from:{
+    name:'Cuubas',
+    address:'no-reply@cuubas.dk'
+  }
 };
 if(process.env.HTTP_PROXY){
   options.proxy = process.env.HTTP_PROXY;
@@ -41,6 +44,7 @@ describe("mail service", function() {
 
     var mailOptions = {
         to: 'domas@cuubas.dk', // list of receivers
+        from: {name:'Test'},
         subject: "Hi "+(new Date()).getTime(), // Subject line
         htmlTemplate: htmlTemplateOptions,
         textTemplate: textTemplateOptions
