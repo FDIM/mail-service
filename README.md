@@ -30,8 +30,8 @@ function MyMailer(){
   // optional, just in case you need to fetch image from db
   this.fileHandler = asyncFileHandler;
   // used by regexp to do global replacement
-  this.placeholderOptions = {open:'\\\*\\\|', close: '\\\|\\\*'}
-  // you can also post process template, default one replaces mailchimp like tags (*|FNAME|*), provided via placeholders template options
+  this.placeholderOptions = {regexp:/\*\|(.+?)\|\*/g, defaultValueSeparator:'?', defaultValue:''};
+  // you can also post process template, default one replaces mailchimp like tags (*|FNAME|*,*|URL?no link|*), provided via placeholders template regexp option
   this.postProcessTemplate = postProcessTemplate;
 }
 function postProcessTemplate(tpl, templateOptions, options, callback) {

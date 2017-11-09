@@ -1,6 +1,6 @@
 {
   "name": "mail-service",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "A simple nodejs module to send rich html emails easily using angular templates and automatic image embedding.",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,9 @@
     "mail",
     "mail-service"
   ],
+  "devDependencies": {
+    "jasmine": "2.8.0"
+  },
   "dependencies": {
     "angular-template": "^2.0.9",
     "async": "^1.5.2",
